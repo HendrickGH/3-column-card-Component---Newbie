@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+		<title>Frontend Mentor | 3-column preview card component</title>
+	</head>
+	<body>
+		<main class="main blur">
+			<div class="container">
+				<section class="section">
+					<article class="article article--sedans">
+						<figure class="box-img">
+							<img src="images/icon-sedans.svg" alt="Car sedans" />
+						</figure>
+						<div class="text-box">
+							<h1 class="title">sedans</h1>
+							<p class="text">
+								Choose a sedan for its affordability and excellent fuel economy.
+								Ideal for cruising in the city or on your next road trip.
+							</p>
+							<a href="#" class="learn-more learn-more--sedans">Learn more</a>
+						</div>
+					</article>
+					<article class="article article--suv">
+						<figure class="box-img">
+							<img src="images/icon-suvs.svg" alt="Car suv" />
+						</figure>
+						<div class="text-box">
+							<h1 class="title">suvs</h1>
+							<p class="text">
+								Take an SUV for its spacious interior, power, and versatility.
+								Perfect for your next family vacation and off-road adventures.
+							</p>
+							<a href="#" class="learn-more learn-more--suv">Learn more</a>
+						</div>
+					</article>
+					<article class="article article--luxury">
+						<figure class="box-img">
+							<img src="images/icon-luxury.svg" alt="Car luxury" />
+						</figure>
+						<div class="text-box">
+							<h1 class="title">luxury</h1>
+							<p class="text">
+								Cruise in the best car brands without the bloated prices. Enjoy
+								the enhanced comfort of a luxury rental and arrive in style.
+							</p>
+							<a href="#" class="learn-more learn-more--luxury">Learn more</a>
+						</div>
+					</article>
+				</section>
+			</div>
+		</main>
+		<div class="attribution">
+			<div class="hendrick-info">
+				<button class="close">
+					<ion-icon name="close"></ion-icon>
+				</button>
+				<div class="hendrick-details">
+					<p>
+						Challenge by
+						<a
+							href="https://www.frontendmentor.io?ref=challenge"
+							target="_blank"
+						>
+							Frontend Mentor
+						</a>
+					</p>
+					<p class="hendrick">
+						Coded by
+						<a href="https://www.linkedin.com/in/hendrick-galarza/"
+							>Hendrick GH</a
+						>
+					</p>
+					<ul class="socials">
+						<li class="social">
+							<a href="https://github.com/HendrickGH"
+								><ion-icon name="logo-github"></ion-icon
+							></a>
+						</li>
+						<li class="social">
+							<a href="https://twitter.com/HendrickGalarza"
+								><ion-icon name="logo-twitter"></ion-icon
+							></a>
+						</li>
+						<li class="social">
+							<a href="tel:7721698485"><ion-icon name="call"></ion-icon></a>
+						</li>
+						<li class="social">
+							<a href="https://hendrickgh.netlify.app/"
+								><ion-icon name="globe"></ion-icon
+							></a>
+						</li>
+						<li class="social">
+							<a href="Currículum.pdf" download="cv-hendrick"
+								><ion-icon name="attach"></ion-icon
+							></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script>
+			const showContent = document.querySelector('.blur');
+			const btnClose = document.querySelector('.close');
+			const deleteModal = () => {
+				showContent.classList.remove('blur');
+				btnClose.parentElement.parentElement.remove();
+			};
+			btnClose.addEventListener('click', deleteModal);
+		</script>
+	</body>
+</html>

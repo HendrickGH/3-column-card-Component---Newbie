@@ -1,0 +1,222 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700
+*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Lexend Deca', sans-serif;
+}
+.main {
+	background-color: #f2f2f2;
+	padding: 12rem;
+}
+.container {
+	/* margin: 0 auto; */
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+.section {
+	display: grid;
+	width: 700px;
+	grid-template-columns: 1fr 1fr 1fr;
+	border-radius: 2.8rem;
+}
+.article {
+	display: flex;
+	flex-direction: column;
+	padding: 2.4rem;
+	gap: 2.4rem;
+}
+.article:first-child {
+	border-top-left-radius: 0.8rem;
+	border-bottom-left-radius: 0.8rem;
+}
+.article:last-child {
+	border-top-right-radius: 0.8rem;
+	border-bottom-right-radius: 0.8rem;
+}
+.article--sedans {
+	background-color: #e38826;
+}
+.article--suv {
+	background-color: #006970;
+}
+.article--luxury {
+	background-color: #004241;
+}
+.title {
+	font-family: 'Big Shoulders Display', cursive;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 3.2rem;
+	letter-spacing: 1px;
+	color: #f2f2f2;
+}
+.text-box {
+	color: rgba(255, 255, 255, 0.749);
+	font-size: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+	align-items: flex-start;
+}
+.text {
+	color: #ffffffbf;
+	font-weight: 400;
+	margin-right: 2.4rem;
+	letter-spacing: 0.075px;
+	line-height: 1.5;
+}
+.learn-more {
+	text-decoration: none;
+	background-color: #f2f2f2;
+	padding: 1rem 2.4rem;
+	border-radius: 2rem;
+	margin-top: 2.4rem;
+	transition: all 0.3s;
+	border: 2px solid transparent;
+	margin-bottom: 2.4rem;
+}
+.learn-more:hover {
+	background-color: transparent;
+	color: #f2f2f2;
+	border: 2px solid #f2f2f2;
+}
+.learn-more--sedans {
+	color: #e38826;
+}
+.learn-more--suv {
+	color: #006970;
+}
+.learn-more--luxury {
+	color: #004241;
+}
+.box-img img {
+	height: 3.2rem;
+}
+@media (max-width: 500px) {
+	html {
+		font-size: 50%;
+	}
+	.main {
+		padding: 8rem 2.4rem;
+	}
+	.section {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.article {
+		padding: 2.4rem 3.6rem;
+		margin: 0 1.2rem;
+	}
+	.article:first-child {
+		border-radius: 0;
+		border-top-right-radius: 0.8rem;
+		border-top-left-radius: 0.8rem;
+	}
+	.article:last-child {
+		border-radius: 0;
+		border-bottom-right-radius: 0.8rem;
+		border-bottom-left-radius: 0.8rem;
+	}
+	.learn-more {
+		margin: 0;
+	}
+}
+/* MODAL COMPONENT AND HOW IT WORKS, BELOW */
+.attribution {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	background-color: #fff;
+}
+.attribution a:link,
+.attribution a:visited {
+	color: #000;
+	font-weight: 700;
+	text-decoration: none;
+}
+.hendrick-info {
+	position: relative;
+	padding: 4.8rem;
+}
+.hendrick-details {
+	display: flex;
+	flex-direction: column;
+	gap: 1.8rem;
+}
+.socials {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+.social {
+	font-size: 1.8rem;
+}
+.close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(-50%, 50%);
+	background-color: transparent;
+	border: none;
+	font-size: 2.4rem;
+	cursor: pointer;
+	outline: none;
+}
+.close:focus {
+	box-shadow: 0 0 0 0.05rem #000;
+}
+.blur {
+	filter: blur(0.5rem);
+	pointer-events: none;
+}
+.opacity-medium {
+	opacity: 0.5;
+}
+.opacity-min {
+	opacity: 1;
+}
